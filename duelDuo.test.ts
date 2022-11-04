@@ -18,3 +18,8 @@ test('Title shows up when page loads', async () => {
     const displayed = await title.isDisplayed()
     expect(displayed).toBe(true)
 })
+
+test('shuffle array', async () => {
+    await shuffleArray(driver)
+})
+

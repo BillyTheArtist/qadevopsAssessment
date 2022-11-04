@@ -6,6 +6,14 @@ const {shuffleArray} = require('./utils')
 require('dotenv').config()
 app.use(express.json())
 
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+rollbar.log('Hello world!')
 
 let {home} = require("./controllers/pageCtrl")
 
