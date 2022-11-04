@@ -19,7 +19,20 @@ test('Title shows up when page loads', async () => {
     expect(displayed).toBe(true)
 })
 
-test('shuffle array', async () => {
-    await shuffleArray(driver)
+test('Clicking draw shows div with id of "choices"', async () => {
+    await driver.findElement(By.id('draw')).click()
+    let choicesSection = await driver.findElement(By.id('choices'))
+    let displayed = await choicesSection.isDisplayed()
+    expect(displayed).toBe(true)
 })
+
+test('Clicking "add to duo" button shows the div with the id of "player-duo"', async () => {
+    await driver.findElement(By.id('draw')).click()
+    await driver.sleep(100)
+    await driver.findElement(By.css('.bot-btn')).click()
+    let playerDuoSection = await driver.findElement(By.id('player-duo'))
+    let displayed = await playerDuoSection.isDisplayed()
+    expect(displayed).toBe(true)
+})
+
 
