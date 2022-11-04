@@ -1,0 +1,59 @@
+--Test Plan: See all bots feature--
+
+Overview:
+Test the see all bots feature on the duel duo app
+
+Links:
+http://127.0.0.1:5500/public/index.html
+
+Test Criteria:
+Ensure that the "see all bots" feature display all relevent bots
+
+Entry Criteria:
+Test criteria provided
+Running version provided for testing
+computer/modern browser available for testing
+
+Exit Criteria:
+Must pass tests
+
+
+Other Detials:
+Test on Mac and Windows 10/11
+Should run on all modern browsers (exclude IE)
+
+
+
+--Test Case allBots_1--
+
+Steps:
+Navigate to http://127.0.0.1:5500/public/index.html
+Click on the see all bots button
+results should appear
+wait for results
+
+Test Post conditions:
+All bots should appear
+
+--Bug Report on allBots_1--
+
+11/4/22
+
+see all bots button yeilded no results, does not function
+
+Steps to reproduce:
+1 Navigate to app
+2 Click on see all bots button
+3 Wait for items to appear
+
+Desired Results:
+All bots should appear
+
+Actual Results:
+No bots appeared, button does not function
+
+Env:
+Chrome:
+106.0.5249.119 (Official Build) (64-bit) (cohort: Stable)
+os
+windows 10
